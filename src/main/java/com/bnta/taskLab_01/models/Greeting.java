@@ -1,18 +1,16 @@
 package com.bnta.taskLab_01.models;
 
+import java.time.LocalTime;
+
 public class Greeting {
 
     private String name;
-    private int timeOfDay;
+    private LocalTime timeOfDay;
 
-    public Greeting(String Word){
-        this.name = name;
-        this.timeOfDay = 0;
-    }
 
-    public Greeting(String name, int timeOfDay) {
+    public Greeting(String name) {
         this.name = name;
-        this.timeOfDay = timeOfDay;
+        this.timeOfDay = LocalTime.now();
     }
 
     public String getName() {
@@ -23,11 +21,11 @@ public class Greeting {
         this.name = name;
     }
 
-    public int getTimeOfDay() {
+    public LocalTime getTimeOfDay() {
         return timeOfDay;
     }
 
-    public void setTimeOfDay(int timeOfDay) {
+    public void setTimeOfDay(LocalTime timeOfDay) {
         this.timeOfDay = timeOfDay;
     }
 }
